@@ -31,6 +31,47 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         title: Text('Dreawer Andrea'),
       ),
+      drawer: Drawer(
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blueGrey,
+              ),
+              child: Text('Drawer Andrea - Header'),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.apple,
+              ),
+              title: const Text('Apple'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.android,
+              ),
+              title: const Text('Android'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.window,
+              ),
+              title: const Text('Windows'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
