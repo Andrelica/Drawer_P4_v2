@@ -36,11 +36,22 @@ class _MyHomePageState extends State<MyHomePage> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blueGrey,
+            const UserAccountsDrawerHeader(
+              // <-- SEE HERE
+              decoration: BoxDecoration(color: Colors.blueGrey),
+              accountName: Text(
+                "Andrea Sanchez - 6toJ",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              child: Text('Drawer Andrea - Header'),
+              accountEmail: Text(
+                "andrelicasanchez21@gmail.com",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              currentAccountPicture: FlutterLogo(),
             ),
             ListTile(
               leading: Icon(
